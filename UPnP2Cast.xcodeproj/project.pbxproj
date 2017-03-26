@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452A13964B466F2D06CEC416 /* Pods_UPnP2CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AD2E7481A6BBCA6ABDF05D /* Pods_UPnP2CastTests.framework */; };
+		6C0A3C2A1E85C15400DFE344 /* PlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0A3C291E85C15400DFE344 /* PlayingViewController.swift */; };
+		6C0A3C301E88052300DFE344 /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0A3C2F1E88052300DFE344 /* AlbumCollectionViewController.swift */; };
+		6C0A3C321E880D2500DFE344 /* ExtendSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0A3C311E880D2500DFE344 /* ExtendSplitViewController.swift */; };
+		6C1AE98B1E587D4B00D28706 /* Rx_UPPDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AE98A1E587D4B00D28706 /* Rx_UPPDiscovery.swift */; };
+		6C1AE98E1E588BF700D28706 /* DeviceSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AE98D1E588BF700D28706 /* DeviceSelectorViewController.swift */; };
+		6C1AE9911E58958200D28706 /* SelectedDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AE9901E58958200D28706 /* SelectedDevices.swift */; };
 		6C5B64051E428B2100FB475F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B64041E428B2100FB475F /* AppDelegate.swift */; };
-		6C5B64071E428B2100FB475F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B64061E428B2100FB475F /* ViewController.swift */; };
 		6C5B640A1E428B2100FB475F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B64081E428B2100FB475F /* Main.storyboard */; };
 		6C5B640C1E428B2100FB475F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B640B1E428B2100FB475F /* Assets.xcassets */; };
 		6C5B640F1E428B2100FB475F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B640D1E428B2100FB475F /* LaunchScreen.storyboard */; };
 		6C5B641A1E428B2100FB475F /* UPnP2CastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B64191E428B2100FB475F /* UPnP2CastTests.swift */; };
+		6C8834771E5BA20B0063ADDB /* ServerBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */; };
+		6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */; };
+		911A3B2A53337708B6F216B2 /* Pods_UPnP2Cast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A369BF03ED0AE8D79DFB7CEF /* Pods_UPnP2Cast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +35,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0964439C6B519ADEEDD49F11 /* Pods-UPnP2Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPnP2Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPnP2Cast/Pods-UPnP2Cast.debug.xcconfig"; sourceTree = "<group>"; };
+		6C0A3C291E85C15400DFE344 /* PlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingViewController.swift; sourceTree = "<group>"; };
+		6C0A3C2F1E88052300DFE344 /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
+		6C0A3C311E880D2500DFE344 /* ExtendSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendSplitViewController.swift; sourceTree = "<group>"; };
+		6C129CDA1E4292BB00E86695 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Pods/../build/Debug-iphoneos/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
+		6C1AE98A1E587D4B00D28706 /* Rx_UPPDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx_UPPDiscovery.swift; sourceTree = "<group>"; };
+		6C1AE98D1E588BF700D28706 /* DeviceSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSelectorViewController.swift; sourceTree = "<group>"; };
+		6C1AE9901E58958200D28706 /* SelectedDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedDevices.swift; sourceTree = "<group>"; };
 		6C5B64011E428B2100FB475F /* UPnP2Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPnP2Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5B64041E428B2100FB475F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C5B64061E428B2100FB475F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C5B64091E428B2100FB475F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C5B640B1E428B2100FB475F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C5B640E1E428B2100FB475F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +52,15 @@
 		6C5B64151E428B2100FB475F /* UPnP2CastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UPnP2CastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5B64191E428B2100FB475F /* UPnP2CastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPnP2CastTests.swift; sourceTree = "<group>"; };
 		6C5B641B1E428B2100FB475F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerBrowseViewController.swift; sourceTree = "<group>"; };
+		6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaBrowseViewController.swift; sourceTree = "<group>"; };
+		6CD6E9911E633F7B00BB986D /* Rx_UPPBasicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx_UPPBasicService.swift; sourceTree = "<group>"; };
+		6CD6E9931E84660D00BB986D /* UPnP2Cast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UPnP2Cast.entitlements; sourceTree = "<group>"; };
+		90AD2E7481A6BBCA6ABDF05D /* Pods_UPnP2CastTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPnP2CastTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A369BF03ED0AE8D79DFB7CEF /* Pods_UPnP2Cast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPnP2Cast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7EED861568FD662B1459CEB /* Pods-UPnP2Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPnP2Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPnP2Cast/Pods-UPnP2Cast.release.xcconfig"; sourceTree = "<group>"; };
+		B729D60F50FBCD1E0EF67258 /* Pods-UPnP2CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPnP2CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPnP2CastTests/Pods-UPnP2CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2E4D89B104A83B9F4778ECE /* Pods-UPnP2CastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPnP2CastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPnP2CastTests/Pods-UPnP2CastTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911A3B2A53337708B6F216B2 /* Pods_UPnP2Cast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +76,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452A13964B466F2D06CEC416 /* Pods_UPnP2CastTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57144044C15C60519FADFB0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C129CDA1E4292BB00E86695 /* RxSwift.framework */,
+				A369BF03ED0AE8D79DFB7CEF /* Pods_UPnP2Cast.framework */,
+				90AD2E7481A6BBCA6ABDF05D /* Pods_UPnP2CastTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C0A3C2D1E8804BE00DFE344 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AE98D1E588BF700D28706 /* DeviceSelectorViewController.swift */,
+				6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */,
+				6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		6C0A3C2E1E8804DD00DFE344 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6C0A3C291E85C15400DFE344 /* PlayingViewController.swift */,
+				6C0A3C2F1E88052300DFE344 /* AlbumCollectionViewController.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		6C1AE9891E5878A600D28706 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AE98A1E587D4B00D28706 /* Rx_UPPDiscovery.swift */,
+				6CD6E9911E633F7B00BB986D /* Rx_UPPBasicService.swift */,
+				6C0A3C311E880D2500DFE344 /* ExtendSplitViewController.swift */,
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		6C1AE98C1E588BBD00D28706 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C0A3C2E1E8804DD00DFE344 /* Detail */,
+				6C0A3C2D1E8804BE00DFE344 /* Master */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6C1AE98F1E58956600D28706 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AE9901E58958200D28706 /* SelectedDevices.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		6C5B63F81E428B2100FB475F = {
 			isa = PBXGroup;
 			children = (
 				6C5B64031E428B2100FB475F /* UPnP2Cast */,
 				6C5B64181E428B2100FB475F /* UPnP2CastTests */,
 				6C5B64021E428B2100FB475F /* Products */,
+				57144044C15C60519FADFB0D /* Frameworks */,
+				DB4E5B8E66DEEDC4F9AED846 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +162,11 @@
 		6C5B64031E428B2100FB475F /* UPnP2Cast */ = {
 			isa = PBXGroup;
 			children = (
+				6CD6E9931E84660D00BB986D /* UPnP2Cast.entitlements */,
+				6C1AE98F1E58956600D28706 /* Util */,
+				6C1AE98C1E588BBD00D28706 /* ViewControllers */,
+				6C1AE9891E5878A600D28706 /* Extentions */,
 				6C5B64041E428B2100FB475F /* AppDelegate.swift */,
-				6C5B64061E428B2100FB475F /* ViewController.swift */,
 				6C5B64081E428B2100FB475F /* Main.storyboard */,
 				6C5B640B1E428B2100FB475F /* Assets.xcassets */,
 				6C5B640D1E428B2100FB475F /* LaunchScreen.storyboard */,
@@ -96,6 +184,17 @@
 			path = UPnP2CastTests;
 			sourceTree = "<group>";
 		};
+		DB4E5B8E66DEEDC4F9AED846 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0964439C6B519ADEEDD49F11 /* Pods-UPnP2Cast.debug.xcconfig */,
+				A7EED861568FD662B1459CEB /* Pods-UPnP2Cast.release.xcconfig */,
+				B729D60F50FBCD1E0EF67258 /* Pods-UPnP2CastTests.debug.xcconfig */,
+				C2E4D89B104A83B9F4778ECE /* Pods-UPnP2CastTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C5B641E1E428B2100FB475F /* Build configuration list for PBXNativeTarget "UPnP2Cast" */;
 			buildPhases = (
+				4CAF1C4C99ED549BF19FADF7 /* [CP] Check Pods Manifest.lock */,
 				6C5B63FD1E428B2100FB475F /* Sources */,
 				6C5B63FE1E428B2100FB475F /* Frameworks */,
 				6C5B63FF1E428B2100FB475F /* Resources */,
+				3EBA33ABED30C3F5C61B1074 /* [CP] Embed Pods Frameworks */,
+				DB2AA5E804E9399E7DB00C66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C5B64211E428B2100FB475F /* Build configuration list for PBXNativeTarget "UPnP2CastTests" */;
 			buildPhases = (
+				7446DFF1309155F678D35072 /* [CP] Check Pods Manifest.lock */,
 				6C5B64111E428B2100FB475F /* Sources */,
 				6C5B64121E428B2100FB475F /* Frameworks */,
 				6C5B64131E428B2100FB475F /* Resources */,
+				85C3709861169CE4D3CD4DF9 /* [CP] Embed Pods Frameworks */,
+				6F049103D926257B59197151 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +253,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4GB5S333EU;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6C5B64141E428B2100FB475F = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -196,13 +306,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EBA33ABED30C3F5C61B1074 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UPnP2Cast/Pods-UPnP2Cast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CAF1C4C99ED549BF19FADF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F049103D926257B59197151 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UPnP2CastTests/Pods-UPnP2CastTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7446DFF1309155F678D35072 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85C3709861169CE4D3CD4DF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UPnP2CastTests/Pods-UPnP2CastTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2AA5E804E9399E7DB00C66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UPnP2Cast/Pods-UPnP2Cast-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6C5B63FD1E428B2100FB475F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C5B64071E428B2100FB475F /* ViewController.swift in Sources */,
+				6C0A3C301E88052300DFE344 /* AlbumCollectionViewController.swift in Sources */,
+				6C1AE9911E58958200D28706 /* SelectedDevices.swift in Sources */,
+				6C1AE98B1E587D4B00D28706 /* Rx_UPPDiscovery.swift in Sources */,
 				6C5B64051E428B2100FB475F /* AppDelegate.swift in Sources */,
+				6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */,
+				6C8834771E5BA20B0063ADDB /* ServerBrowseViewController.swift in Sources */,
+				6C0A3C321E880D2500DFE344 /* ExtendSplitViewController.swift in Sources */,
+				6C0A3C2A1E85C15400DFE344 /* PlayingViewController.swift in Sources */,
+				6C1AE98E1E588BF700D28706 /* DeviceSelectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,32 +547,51 @@
 		};
 		6C5B641F1E428B2100FB475F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0964439C6B519ADEEDD49F11 /* Pods-UPnP2Cast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UPnP2Cast/UPnP2Cast.entitlements;
 				DEVELOPMENT_TEAM = 4GB5S333EU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/CocoaUPnP",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
+				);
 				INFOPLIST_FILE = UPnP2Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dkp.UPnP2Cast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		6C5B64201E428B2100FB475F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7EED861568FD662B1459CEB /* Pods-UPnP2Cast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UPnP2Cast/UPnP2Cast.entitlements;
 				DEVELOPMENT_TEAM = 4GB5S333EU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/CocoaUPnP",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
+				);
 				INFOPLIST_FILE = UPnP2Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = dkp.UPnP2Cast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		6C5B64221E428B2100FB475F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B729D60F50FBCD1E0EF67258 /* Pods-UPnP2CastTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -378,6 +607,7 @@
 		};
 		6C5B64231E428B2100FB475F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E4D89B104A83B9F4778ECE /* Pods-UPnP2CastTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +640,7 @@
 				6C5B64201E428B2100FB475F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C5B64211E428B2100FB475F /* Build configuration list for PBXNativeTarget "UPnP2CastTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +649,7 @@
 				6C5B64231E428B2100FB475F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
