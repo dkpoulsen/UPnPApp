@@ -19,8 +19,10 @@
 		6C5B640C1E428B2100FB475F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B640B1E428B2100FB475F /* Assets.xcassets */; };
 		6C5B640F1E428B2100FB475F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B640D1E428B2100FB475F /* LaunchScreen.storyboard */; };
 		6C5B641A1E428B2100FB475F /* UPnP2CastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B64191E428B2100FB475F /* UPnP2CastTests.swift */; };
+		6C692FAB1E89AB6100DBB891 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C692FAA1E89AB6100DBB891 /* AlbumViewController.swift */; };
 		6C8834771E5BA20B0063ADDB /* ServerBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */; };
 		6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */; };
+		6CD9C69B1E898F16007A81B7 /* Rx_UPPBasicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD6E9911E633F7B00BB986D /* Rx_UPPBasicService.swift */; };
 		911A3B2A53337708B6F216B2 /* Pods_UPnP2Cast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A369BF03ED0AE8D79DFB7CEF /* Pods_UPnP2Cast.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		6C5B64151E428B2100FB475F /* UPnP2CastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UPnP2CastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5B64191E428B2100FB475F /* UPnP2CastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPnP2CastTests.swift; sourceTree = "<group>"; };
 		6C5B641B1E428B2100FB475F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C692FAA1E89AB6100DBB891 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerBrowseViewController.swift; sourceTree = "<group>"; };
 		6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaBrowseViewController.swift; sourceTree = "<group>"; };
 		6CD6E9911E633F7B00BB986D /* Rx_UPPBasicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx_UPPBasicService.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 			children = (
 				6C0A3C291E85C15400DFE344 /* PlayingViewController.swift */,
 				6C0A3C2F1E88052300DFE344 /* AlbumCollectionViewController.swift */,
+				6C692FAA1E89AB6100DBB891 /* AlbumViewController.swift */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -406,6 +410,7 @@
 			files = (
 				6C0A3C301E88052300DFE344 /* AlbumCollectionViewController.swift in Sources */,
 				6C1AE9911E58958200D28706 /* SelectedDevices.swift in Sources */,
+				6CD9C69B1E898F16007A81B7 /* Rx_UPPBasicService.swift in Sources */,
 				6C1AE98B1E587D4B00D28706 /* Rx_UPPDiscovery.swift in Sources */,
 				6C5B64051E428B2100FB475F /* AppDelegate.swift in Sources */,
 				6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */,
@@ -413,6 +418,7 @@
 				6C0A3C321E880D2500DFE344 /* ExtendSplitViewController.swift in Sources */,
 				6C0A3C2A1E85C15400DFE344 /* PlayingViewController.swift in Sources */,
 				6C1AE98E1E588BF700D28706 /* DeviceSelectorViewController.swift in Sources */,
+				6C692FAB1E89AB6100DBB891 /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

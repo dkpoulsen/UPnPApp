@@ -40,8 +40,19 @@ class ServerBrowseViewController: UIViewController {
         selectedServer.device.subscribe(onNext : { device in
             let storyboard = UIStoryboard(name: "Main", bundle:nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "mediaViewController") as! MediaBrowseViewController
-            vc.server = device
-            self.navigationController?.pushViewController(vc, animated: true)
+            
+            device.contentDirectoryService().browse(withObjectID: nil, browseFlag: BrowseDirectChildren, filter: nil, startingIndex: 0, requestedCount: 0, sortCritera: nil, completion: { (dict : [AnyHashable : Any]?, e :Error?) in
+                if let array = dict?["Result"] as? [UPPMediaItem]{
+                    for m in array{
+                        print(m.objectClass)
+                    }
+                    vc.tableViewArray.value = array
+                    vc.server = device
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }else{
+                    print(e)
+                }
+            })
         }).addDisposableTo(disposeBag)
     }
 

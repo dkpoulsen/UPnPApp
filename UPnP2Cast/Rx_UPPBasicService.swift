@@ -11,12 +11,22 @@ import CocoaUPnP
 import RxSwift
 import RxCocoa
 
-extension Reactive where Base : UPPAVTransportService{
-    
-    func setAVTransportURI() -> Observable<Any>{
-        Observable.create{
+extension Reactive where Base : UPPContentDirectoryService{
+
+    func browse(objectID : String?) -> Observable<[UPPMediaItem]>{
+        return Observable<[UPPMediaItem]>.create{ observable in
+            self.base.browse(withObjectID: objectID, browseFlag: BrowseDirectChildren, filter: nil, startingIndex: nil, requestedCount: nil, sortCritera: nil, completion: { (dict : [AnyHashable : Any]?, e :Error?) in
+                if let array = dict?["Result"] as? [UPPMediaItem]{
+                    observable.onNext(array)
+                }else{
+                    observable.onError(e!)
+                }
+            })
             
-            $0.on(.next())
+            return Disposables.create {
+                observable.onCompleted()
+            }
+
         }
         
     }

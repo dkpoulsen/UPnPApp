@@ -22,31 +22,55 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegateF
     public var objectID : String? = nil
     public var server : UPPMediaServerDevice? = nil
     
-    private let collectionArray = Variable([UPPMediaItem]())
-
+    public let collectionArray = Variable([UPPMediaItem]())
+    
+    func dismiss(sender:AnyObject?){ 
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        server?.contentDirectoryService().browse(withObjectID: objectID, browseFlag: BrowseDirectChildren, filter: nil, startingIndex: 0, requestedCount: 0, sortCritera: nil, completion: { (dict : [AnyHashable : Any]?, e :Error?) in
-            if let array = dict?["Result"] as? [UPPMediaItem]{
-                self.collectionArray.value = array
-            }else{
-                print(e)
-            }
-        })
-        
-        navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+        if let splitV = self.splitViewController{
+            navigationItem.leftBarButtonItem = splitV.displayModeButtonItem
+        }else{
+            let button = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismiss(sender:)))
+            navigationItem.leftBarButtonItem = button
+        }
         navigationItem.leftItemsSupplementBackButton = true
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
         collectionView!.delegate = nil
         collectionArray.asObservable().bindTo(collectionView!.rx.items(cellIdentifier: "albumCell", cellType: AlbumCell.self)) { row, mediaItem, cell in
             cell.mediaItem = mediaItem
         }.addDisposableTo(disposeBag)
         collectionView!.rx.setDelegate(self).addDisposableTo(disposeBag)
+        
+        let selectedCell = collectionView.rx.itemSelected.asObservable().map{self.collectionView.cellForItem(at: $0)! as! AlbumCell}.shareReplayLatestWhileConnected()
 
+        let selectedMedia = selectedCell.map{$0.mediaItem}.filterNil().filter{($0.firstPlayableResource() != nil)}
+        
+        let selectedFolder = selectedCell.map{$0.mediaItem}.filterNil().filter{$0.isContainer}.flatMap{self.server!.contentDirectoryService().rx.browse(objectID: $0.objectID)}
+
+        let combined = Observable.zip(selectedCell, selectedFolder){$0}
+        
+        combined.subscribe(onNext : { media in
+            let storyboard = UIStoryboard(name: "Main", bundle:nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AlbumViewController") as! AlbumViewController
+            vc.server = self.server
+            vc.image.kf.setImage(with: media.0.mediaItem?.albumArtURL())
+            vc.albumLabel.text = media.0.mediaItem?.albumTitle
+            vc.artistLabel.text = media.0.mediaItem?.artist
+            vc.tableViewArray.value = media.1
+            self.navigationController?.pushViewController(vc, animated: true)
+        }).addDisposableTo(disposeBag)
+        
+        Observable.combineLatest(selectedMedia, SelectedPlaybackDevice.Shared.device){$0}.subscribe(onNext : { (media : UPPMediaItem, device : UPPMediaRendererDevice) in
+            device.avTransportService()?.setAVTransportURI((media.firstPlayableResource()?.resourceURLString)!, currentURIMetaData: UPPMetadataForItem(media), instanceID: "0", success: { (succes : Bool, e : Error?) in
+                if(succes){
+                    device.avTransportService()?.play(withInstanceID: "0", success: nil)
+                }
+            })
+        }).addDisposableTo(disposeBag)
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -71,7 +95,7 @@ class AlbumCell: UICollectionViewCell {
             if let url = mediaItem?.albumArtURL(){
                 image.kf.setImage(with: url)
             }
-            title.text = mediaItem?.albumTitle
+            title.text = mediaItem?.itemTitle
         }
     }
 }
