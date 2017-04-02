@@ -12,7 +12,7 @@ import RxCocoa
 import CocoaUPnP
 import RxOptional
 
-class AlbumViewController: UIViewController {
+class AlbumViewController: AppColoursViewController {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var albumLabel: UILabel!
@@ -23,10 +23,15 @@ class AlbumViewController: UIViewController {
 
     public var server : UPPMediaServerDevice? = nil
     public let tableViewArray = Variable([UPPMediaItem]())
+    public var mediaItem : UPPMediaItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        image.kf.setImage(with: mediaItem?.albumArtURL())
+        albumLabel.text = mediaItem?.albumTitle
+        artistLabel.text = mediaItem?.artist
+        
         mediaTableView.register(MediaTableViewCell.self, forCellReuseIdentifier: "mediaCell")
 
         tableViewArray.asObservable().bindTo(mediaTableView.rx.items(cellIdentifier: "mediaCell", cellType: MediaTableViewCell.self)){(row, mediaItem, cell) in

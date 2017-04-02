@@ -14,7 +14,7 @@ import Kingfisher
 
 private let reuseIdentifier = "Cell"
 
-class AlbumCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+class AlbumCollectionViewController: AppColoursViewController, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     let disposeBag = DisposeBag()
@@ -44,7 +44,7 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegateF
         }.addDisposableTo(disposeBag)
         collectionView!.rx.setDelegate(self).addDisposableTo(disposeBag)
         
-        let selectedCell = collectionView.rx.itemSelected.asObservable().map{self.collectionView.cellForItem(at: $0)! as! AlbumCell}.shareReplayLatestWhileConnected()
+        let selectedCell = collectionView.rx.itemSelected.asObservable().map{self.collectionView.cellForItem(at: $0)! as! AlbumCell}
 
         let selectedMedia = selectedCell.map{$0.mediaItem}.filterNil().filter{($0.firstPlayableResource() != nil)}
         
@@ -56,9 +56,7 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegateF
             let storyboard = UIStoryboard(name: "Main", bundle:nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "AlbumViewController") as! AlbumViewController
             vc.server = self.server
-            vc.image.kf.setImage(with: media.0.mediaItem?.albumArtURL())
-            vc.albumLabel.text = media.0.mediaItem?.albumTitle
-            vc.artistLabel.text = media.0.mediaItem?.artist
+            vc.mediaItem = media.0.mediaItem
             vc.tableViewArray.value = media.1
             self.navigationController?.pushViewController(vc, animated: true)
         }).addDisposableTo(disposeBag)

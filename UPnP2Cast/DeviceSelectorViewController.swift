@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import CocoaUPnP
 
-class DeviceSelectorViewController: UIViewController {
+class DeviceSelectorViewController: AppColoursViewController {
 
     @IBOutlet weak var deviceTableView: UITableView!
     

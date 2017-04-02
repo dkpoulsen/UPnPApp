@@ -11,7 +11,7 @@ import RxSwift
 import CocoaUPnP
 import RxCocoa
 
-class ServerBrowseViewController: UIViewController {
+class ServerBrowseViewController: AppColoursViewController {
 
     @IBOutlet weak var deviceTableView: UITableView!
     

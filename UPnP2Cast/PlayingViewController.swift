@@ -12,7 +12,7 @@ import RxCocoa
 import RxOptional
 import CocoaUPnP
 
-class PlayingViewController: UIViewController {
+class PlayingViewController: AppColoursViewController {
 
     let selectedPlayback = SelectedPlaybackDevice.Shared
     

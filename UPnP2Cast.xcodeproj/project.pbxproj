@@ -19,6 +19,11 @@
 		6C5B640C1E428B2100FB475F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B640B1E428B2100FB475F /* Assets.xcassets */; };
 		6C5B640F1E428B2100FB475F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B640D1E428B2100FB475F /* LaunchScreen.storyboard */; };
 		6C5B641A1E428B2100FB475F /* UPnP2CastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B64191E428B2100FB475F /* UPnP2CastTests.swift */; };
+		6C6787891E8FD9D1002AB5ED /* ExtendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6787881E8FD9D1002AB5ED /* ExtendViewController.swift */; };
+		6C67878C1E8FE167002AB5ED /* ExtendWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67878A1E8FDF91002AB5ED /* ExtendWindow.swift */; };
+		6C67878E1E8FE38F002AB5ED /* AppColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67878D1E8FE38F002AB5ED /* AppColours.swift */; };
+		6C6787911E913475002AB5ED /* AppColoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6787901E913475002AB5ED /* AppColoursTableViewController.swift */; };
+		6C6787931E91423C002AB5ED /* AppColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6787921E91423C002AB5ED /* AppColoursViewController.swift */; };
 		6C692FAB1E89AB6100DBB891 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C692FAA1E89AB6100DBB891 /* AlbumViewController.swift */; };
 		6C8834771E5BA20B0063ADDB /* ServerBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */; };
 		6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */; };
@@ -54,6 +59,11 @@
 		6C5B64151E428B2100FB475F /* UPnP2CastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UPnP2CastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5B64191E428B2100FB475F /* UPnP2CastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPnP2CastTests.swift; sourceTree = "<group>"; };
 		6C5B641B1E428B2100FB475F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6787881E8FD9D1002AB5ED /* ExtendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendViewController.swift; sourceTree = "<group>"; };
+		6C67878A1E8FDF91002AB5ED /* ExtendWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendWindow.swift; sourceTree = "<group>"; };
+		6C67878D1E8FE38F002AB5ED /* AppColours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColours.swift; sourceTree = "<group>"; };
+		6C6787901E913475002AB5ED /* AppColoursTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColoursTableViewController.swift; sourceTree = "<group>"; };
+		6C6787921E91423C002AB5ED /* AppColoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColoursViewController.swift; sourceTree = "<group>"; };
 		6C692FAA1E89AB6100DBB891 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerBrowseViewController.swift; sourceTree = "<group>"; };
 		6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaBrowseViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +132,8 @@
 				6C1AE98A1E587D4B00D28706 /* Rx_UPPDiscovery.swift */,
 				6CD6E9911E633F7B00BB986D /* Rx_UPPBasicService.swift */,
 				6C0A3C311E880D2500DFE344 /* ExtendSplitViewController.swift */,
+				6C6787881E8FD9D1002AB5ED /* ExtendViewController.swift */,
+				6C67878A1E8FDF91002AB5ED /* ExtendWindow.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -129,6 +141,7 @@
 		6C1AE98C1E588BBD00D28706 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6C67878F1E913450002AB5ED /* AppColours */,
 				6C0A3C2E1E8804DD00DFE344 /* Detail */,
 				6C0A3C2D1E8804BE00DFE344 /* Master */,
 			);
@@ -139,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6C1AE9901E58958200D28706 /* SelectedDevices.swift */,
+				6C67878D1E8FE38F002AB5ED /* AppColours.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -186,6 +200,15 @@
 				6C5B641B1E428B2100FB475F /* Info.plist */,
 			);
 			path = UPnP2CastTests;
+			sourceTree = "<group>";
+		};
+		6C67878F1E913450002AB5ED /* AppColours */ = {
+			isa = PBXGroup;
+			children = (
+				6C6787901E913475002AB5ED /* AppColoursTableViewController.swift */,
+				6C6787921E91423C002AB5ED /* AppColoursViewController.swift */,
+			);
+			name = AppColours;
 			sourceTree = "<group>";
 		};
 		DB4E5B8E66DEEDC4F9AED846 /* Pods */ = {
@@ -408,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6787931E91423C002AB5ED /* AppColoursViewController.swift in Sources */,
 				6C0A3C301E88052300DFE344 /* AlbumCollectionViewController.swift in Sources */,
 				6C1AE9911E58958200D28706 /* SelectedDevices.swift in Sources */,
 				6CD9C69B1E898F16007A81B7 /* Rx_UPPBasicService.swift in Sources */,
@@ -416,9 +440,13 @@
 				6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */,
 				6C8834771E5BA20B0063ADDB /* ServerBrowseViewController.swift in Sources */,
 				6C0A3C321E880D2500DFE344 /* ExtendSplitViewController.swift in Sources */,
+				6C6787911E913475002AB5ED /* AppColoursTableViewController.swift in Sources */,
+				6C67878C1E8FE167002AB5ED /* ExtendWindow.swift in Sources */,
+				6C6787891E8FD9D1002AB5ED /* ExtendViewController.swift in Sources */,
 				6C0A3C2A1E85C15400DFE344 /* PlayingViewController.swift in Sources */,
 				6C1AE98E1E588BF700D28706 /* DeviceSelectorViewController.swift in Sources */,
 				6C692FAB1E89AB6100DBB891 /* AlbumViewController.swift in Sources */,
+				6C67878E1E8FE38F002AB5ED /* AppColours.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +592,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
 				);
 				INFOPLIST_FILE = UPnP2Cast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dkp.UPnP2Cast;
@@ -586,6 +615,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
 				);
 				INFOPLIST_FILE = UPnP2Cast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = dkp.UPnP2Cast;

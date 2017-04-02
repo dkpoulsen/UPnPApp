@@ -13,7 +13,7 @@ import CocoaUPnP
 import RxOptional
 
 
-class MediaBrowseViewController: UIViewController {
+class MediaBrowseViewController: AppColoursViewController {
     
     @IBOutlet weak var mediaTableView: UITableView!
     
