@@ -3,3 +3,5 @@ osx_image: xcode8.3
 xcode_sdk: iphonesimulator10.3
 xcode_workspace: UPnP2Cast.xcworkspace
 xcode_scheme: UPnP2Cast
+script:
+- xcodebuild clean && xcodebuild build -workspace UPnP2Cast.xcworkspace -scheme UPnP2Cast
