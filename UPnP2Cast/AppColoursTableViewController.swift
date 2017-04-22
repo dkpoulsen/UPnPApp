@@ -52,7 +52,7 @@ class AppColoursTableViewController: UIViewController, UITableViewDelegate {
             case .background:
                 cell.name.text = "Background"
                 cell.colour.subscribe(onNext : {
-                    self.appColours.backgroudnColour.onNext($0)
+                    self.appColours.backgroundColour.onNext($0)
                 }).addDisposableTo(self.disposeBag)
                 break
             }
@@ -77,6 +77,7 @@ class ColourCell: UITableViewCell {
     @IBOutlet weak var rSlider: UISlider!
     @IBOutlet weak var gSlider: UISlider!
     @IBOutlet weak var bSlider: UISlider!
+    @IBOutlet weak var oSlider: UISlider!
     
     @IBOutlet weak var colourView: UIView!
     
@@ -85,8 +86,8 @@ class ColourCell: UITableViewCell {
     let disposeBag = DisposeBag()
     
     override func layoutSubviews() {
-        Observable.combineLatest(rSlider.rx.value, gSlider.rx.value, bSlider.rx.value){$0}.subscribe(onNext : { r, g, b in
-            let colour = UIColor(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: 1.0)
+        Observable.combineLatest(rSlider.rx.value, gSlider.rx.value, bSlider.rx.value, oSlider.rx.value){$0}.subscribe(onNext : { r, g, b, o in
+            let colour = UIColor(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: CGFloat(o))
             self.colourView.backgroundColor = colour
             self.colour.onNext(colour)
         }).addDisposableTo(disposeBag)

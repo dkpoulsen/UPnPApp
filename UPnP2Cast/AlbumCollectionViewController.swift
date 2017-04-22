@@ -24,10 +24,6 @@ class AlbumCollectionViewController: AppColoursViewController, UICollectionViewD
     
     public let collectionArray = Variable([UPPMediaItem]())
     
-    func dismiss(sender:AnyObject?){ 
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let splitV = self.splitViewController{
@@ -72,9 +68,7 @@ class AlbumCollectionViewController: AppColoursViewController, UICollectionViewD
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width
-        let cellWidth = (width - 30) / 3 // compute your cell width
-        return CGSize(width: cellWidth, height: cellWidth / 0.6)
+        return CGSize(width: 125, height: 150)
     }
     
     override func didReceiveMemoryWarning() {

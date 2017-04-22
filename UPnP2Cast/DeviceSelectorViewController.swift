@@ -21,13 +21,12 @@ class DeviceSelectorViewController: AppColoursViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        deviceTableView.register(DeviceTableViewCell.self, forCellReuseIdentifier: "std")
-        
+                
         discovery.devices.asObservable().map{$0.filter({ (device :UPPBasicDevice) -> Bool in
             device is UPPMediaRendererDevice
-        })}.bindTo(deviceTableView.rx.items(cellIdentifier: "std", cellType: DeviceTableViewCell.self)){(row, device, cell) in
-            cell.device = (device as! UPPMediaRendererDevice)
+        })}.bindTo(deviceTableView.rx.items(cellIdentifier: "DeviceCell", cellType: DeviceTableViewCell.self)){(row, device, cell) in
+            let device = (device as! UPPMediaRendererDevice)
+            cell.device = device
             cell.textLabel?.text = device.friendlyName
         }.addDisposableTo(disposeBag)
         
@@ -39,6 +38,9 @@ class DeviceSelectorViewController: AppColoursViewController {
         selectedPlayback.device.subscribe(onNext : { device in
             self.tabBarController?.selectedIndex = 1
         }).addDisposableTo(disposeBag)
+        itemSelected.map{self.deviceTableView.cellForRow(at: $0)}.subscribe(onNext : {
+            $0?.editingAccessoryType = .checkmark
+        }).addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +50,6 @@ class DeviceSelectorViewController: AppColoursViewController {
 
 }
 
-class DeviceTableViewCell: UITableViewCell {
+class DeviceTableViewCell: AppColourTableViewCell {
     var device : UPPMediaRendererDevice?
 }

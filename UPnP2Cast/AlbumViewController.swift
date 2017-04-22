@@ -50,6 +50,8 @@ class AlbumViewController: AppColoursViewController {
                 }
             })
         }).addDisposableTo(disposeBag)
+        
+       let some =  "".lowercased()
     }
 
     override func didReceiveMemoryWarning() {

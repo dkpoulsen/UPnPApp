@@ -16,4 +16,8 @@ extension UIViewController{
     func setupColourScheme(){
         
     }
+    
+    func dismiss(sender:AnyObject?){
+        self.dismiss(animated: true, completion: nil)
+    }
 }

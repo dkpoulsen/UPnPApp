@@ -86,7 +86,7 @@ class MediaBrowseViewController: AppColoursViewController {
     
 }
 
-class MediaTableViewCell: UITableViewCell {
+class MediaTableViewCell: AppColourTableViewCell {
     
     var mediaItem : UPPMediaItem?
     

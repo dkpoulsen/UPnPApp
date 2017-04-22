@@ -63,7 +63,7 @@ class ServerBrowseViewController: AppColoursViewController {
 
 }
 
-class ServerTableViewCell: UITableViewCell {
+class ServerTableViewCell: AppColourTableViewCell {
     
     var device : UPPMediaServerDevice! = nil
     

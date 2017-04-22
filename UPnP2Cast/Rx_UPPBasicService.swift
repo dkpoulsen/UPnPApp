@@ -31,3 +31,42 @@ extension Reactive where Base : UPPContentDirectoryService{
         
     }
 }
+
+extension Reactive where Base : UPPAVTransportService{
+    
+    func positionInfo() -> Observable<PositionInfo>{
+        return Observable.create{ observable in
+            self.base.positionInfo(withInstanceID: nil, completion: { (dict : [AnyHashable : Any]?, e :Error?) in
+                print(dict)
+                if let posInfo = dict as! PositionInfo{
+                    observable.onNext(posInfo)
+                }else{
+                    observable.onError(e!)
+                }
+            })
+        
+            return Disposables.create {
+                observable.onCompleted()
+            }
+        }
+    }
+    
+}
+
+struct PositionInfo : Hashable{
+    let track : String
+    let trackDuration : Int
+    let trackMetaData : String
+    let trackURI : String
+    let relTime : Int
+    let absTime : Int
+    let relCount : Int
+    let absCount : Int
+    var hashValue: Int{
+        return trackURI.hashValue
+    }
+    public static func ==(lhs: PositionInfo, rhs: PositionInfo) -> Bool{
+        return lhs.hashValue == rhs.hashValue
+    }
+
+}
