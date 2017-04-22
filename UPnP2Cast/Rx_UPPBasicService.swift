@@ -38,11 +38,11 @@ extension Reactive where Base : UPPAVTransportService{
         return Observable.create{ observable in
             self.base.positionInfo(withInstanceID: nil, completion: { (dict : [AnyHashable : Any]?, e :Error?) in
                 print(dict)
-                if let posInfo = dict as! PositionInfo{
+                /*if let posInfo = dict as! PositionInfo{
                     observable.onNext(posInfo)
                 }else{
                     observable.onError(e!)
-                }
+                }*/
             })
         
             return Disposables.create {
