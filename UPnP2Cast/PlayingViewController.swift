@@ -19,9 +19,10 @@ class PlayingViewController: AppColoursViewController {
     
     let disposeBag = DisposeBag()
     
+    @IBOutlet weak var play: AnimatableButton!
+    @IBOutlet weak var pause: AnimatableButton!
     @IBOutlet weak var image: AnimatableImageView!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var playPause: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var leftSliderLabel: UILabel!
     @IBOutlet weak var rightSliderLabel: UILabel!
@@ -61,6 +62,14 @@ class PlayingViewController: AppColoursViewController {
         let device = selectedPlayback.device
         Observable.combineLatest(sliderValue, device){$0}.subscribe(onNext : { value, device in
             device.avTransportService()?.setSeekWithInstanceID(nil, unit: "REL_TIME", target: value, success: nil)
+        }).addDisposableTo(disposeBag)
+        
+        play.rx.tap.asObservable().flatMapLatest{SelectedPlaybackDevice.Shared.device}.subscribe(onNext :{
+            $0.avTransportService()?.play(withInstanceID: "0", success: nil)
+        }).addDisposableTo(disposeBag)
+        
+        pause.rx.tap.asObservable().flatMapLatest{SelectedPlaybackDevice.Shared.device}.subscribe(onNext :{
+            $0.avTransportService()?.pause(withInstanceID: "0", success: nil)
         }).addDisposableTo(disposeBag)
     }
     

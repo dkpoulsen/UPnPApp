@@ -176,7 +176,8 @@
                     <connections>
                         <outlet property="image" destination="vI0-nY-VeW" id="CZX-2B-TZT"/>
                         <outlet property="leftSliderLabel" destination="mBq-mO-gdE" id="XOe-6s-IyY"/>
-                        <outlet property="playPause" destination="LJE-g6-g9I" id="eCj-o0-w0b"/>
+                        <outlet property="pause" destination="LJE-g6-g9I" id="x9B-PD-paD"/>
+                        <outlet property="play" destination="nq2-kD-CdY" id="Oko-kN-76C"/>
                         <outlet property="rightSliderLabel" destination="uVX-R2-yCs" id="xMT-gN-64q"/>
                         <outlet property="slider" destination="4DM-YU-8cd" id="CbD-kP-ia2"/>
                         <outlet property="titleLabel" destination="u72-My-0qc" id="Ywu-Ir-3k6"/>
