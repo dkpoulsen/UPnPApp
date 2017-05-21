@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftlyRater
 import UserNotifications
 
 @UIApplicationMain
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        SwiftlyRater.sharedInstance.appId = "1236442460"
+        SwiftlyRater.sharedInstance.applicationName = "OpenUPnP"
+        SwiftlyRater.sharedInstance.usesUntilPrompt = 5
         return true
     }
 
