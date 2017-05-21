@@ -32,11 +32,12 @@ class AlbumViewController: AppColoursViewController {
         albumLabel.text = mediaItem?.albumTitle
         artistLabel.text = mediaItem?.artist
         
-        mediaTableView.register(MediaTableViewCell.self, forCellReuseIdentifier: "mediaCell")
-
         tableViewArray.asObservable().bindTo(mediaTableView.rx.items(cellIdentifier: "mediaCell", cellType: MediaTableViewCell.self)){(row, mediaItem, cell) in
             cell.mediaItem = mediaItem
+            cell.textLabel?.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
             cell.textLabel?.text = mediaItem.itemTitle
+            cell.detailTextLabel?.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+            cell.detailTextLabel?.text = mediaItem.artist
             }.addDisposableTo(disposeBag)
         
         let selectedCell = mediaTableView.rx.itemSelected.asObservable().map{self.mediaTableView.cellForRow(at: $0) as! MediaTableViewCell}.shareReplayLatestWhileConnected()
@@ -47,11 +48,13 @@ class AlbumViewController: AppColoursViewController {
             device.avTransportService()?.setAVTransportURI((media.firstPlayableResource()?.resourceURLString)!, currentURIMetaData: UPPMetadataForItem(media), instanceID: "0", success: { (succes : Bool, e : Error?) in
                 if(succes){
                     device.avTransportService()?.play(withInstanceID: "0", success: nil)
+                    let storyboard = UIStoryboard(name: "Main", bundle:nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "PlayingViewController")
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
             })
         }).addDisposableTo(disposeBag)
         
-       let some =  "".lowercased()
     }
 
     override func didReceiveMemoryWarning() {

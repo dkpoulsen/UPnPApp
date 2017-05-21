@@ -26,6 +26,7 @@ class AlbumCollectionViewController: AppColoursViewController, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let splitV = self.splitViewController{
             navigationItem.leftBarButtonItem = splitV.displayModeButtonItem
         }else{
@@ -61,6 +62,9 @@ class AlbumCollectionViewController: AppColoursViewController, UICollectionViewD
             device.avTransportService()?.setAVTransportURI((media.firstPlayableResource()?.resourceURLString)!, currentURIMetaData: UPPMetadataForItem(media), instanceID: "0", success: { (succes : Bool, e : Error?) in
                 if(succes){
                     device.avTransportService()?.play(withInstanceID: "0", success: nil)
+                    let storyboard = UIStoryboard(name: "Main", bundle:nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "PlayingViewController")
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
             })
         }).addDisposableTo(disposeBag)

@@ -20,4 +20,11 @@ extension UIViewController{
     func dismiss(sender:AnyObject?){
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func showPlayingNow(sender:AnyObject?){
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PlayingViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -21,9 +21,7 @@ class ServerBrowseViewController: AppColoursViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        deviceTableView.register(ServerTableViewCell.self, forCellReuseIdentifier: "serverCell")
-        
+                
         discovery.devices.asObservable().map{$0.filter({ (device :UPPBasicDevice) -> Bool in
             device is UPPMediaServerDevice
         })}.bindTo(deviceTableView.rx.items(cellIdentifier: "serverCell", cellType: ServerTableViewCell.self)){(row, device, cell) in
@@ -37,7 +35,7 @@ class ServerBrowseViewController: AppColoursViewController {
         
         selectedServer.device = LastConnectedServerDevice.get()
         
-        selectedServer.device.subscribe(onNext : { device in
+        selectedServer.device.throttle(0.2, scheduler: MainScheduler.instance).subscribe(onNext : { device in
             let storyboard = UIStoryboard(name: "Main", bundle:nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "mediaViewController") as! MediaBrowseViewController
             
@@ -60,7 +58,7 @@ class ServerBrowseViewController: AppColoursViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 class ServerTableViewCell: AppColourTableViewCell {

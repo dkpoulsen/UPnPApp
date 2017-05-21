@@ -8,6 +8,7 @@
 
 import UIKit
 
+#if DEBUG
 extension UIWindow {
     
     override open var canBecomeFirstResponder: Bool {
@@ -22,3 +23,4 @@ extension UIWindow {
         }
     }
 }
+#endif

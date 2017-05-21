@@ -14,6 +14,7 @@
 		6C1AE98B1E587D4B00D28706 /* Rx_UPPDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AE98A1E587D4B00D28706 /* Rx_UPPDiscovery.swift */; };
 		6C1AE98E1E588BF700D28706 /* DeviceSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AE98D1E588BF700D28706 /* DeviceSelectorViewController.swift */; };
 		6C1AE9911E58958200D28706 /* SelectedDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AE9901E58958200D28706 /* SelectedDevices.swift */; };
+		6C3D0AF61ED1B40900778924 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C3D0AF51ED1B40900778924 /* Settings.bundle */; };
 		6C40F0541EABB55F00017BB2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6C40F0531EABB55F00017BB2 /* README.md */; };
 		6C40F0561EABB57A00017BB2 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6C40F0551EABB57A00017BB2 /* .travis.yml */; };
 		6C5B64051E428B2100FB475F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B64041E428B2100FB475F /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 		6C8834771E5BA20B0063ADDB /* ServerBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */; };
 		6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */; };
 		6C93E4A11E91B1BD00217467 /* AppColourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93E4A01E91B1BD00217467 /* AppColourTableViewCell.swift */; };
+		6CA4DA601EC747B200833C3B /* ExtendInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4DA5F1EC747B200833C3B /* ExtendInt.swift */; };
 		6CD9C69B1E898F16007A81B7 /* Rx_UPPBasicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD6E9911E633F7B00BB986D /* Rx_UPPBasicService.swift */; };
 		911A3B2A53337708B6F216B2 /* Pods_UPnP2Cast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A369BF03ED0AE8D79DFB7CEF /* Pods_UPnP2Cast.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,7 @@
 		6C1AE98A1E587D4B00D28706 /* Rx_UPPDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx_UPPDiscovery.swift; sourceTree = "<group>"; };
 		6C1AE98D1E588BF700D28706 /* DeviceSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSelectorViewController.swift; sourceTree = "<group>"; };
 		6C1AE9901E58958200D28706 /* SelectedDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedDevices.swift; sourceTree = "<group>"; };
+		6C3D0AF51ED1B40900778924 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6C40F0531EABB55F00017BB2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6C40F0551EABB57A00017BB2 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		6C5B64011E428B2100FB475F /* UPnP2Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPnP2Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,7 @@
 		6C8834761E5BA20B0063ADDB /* ServerBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerBrowseViewController.swift; sourceTree = "<group>"; };
 		6C88347C1E5E32970063ADDB /* MediaBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaBrowseViewController.swift; sourceTree = "<group>"; };
 		6C93E4A01E91B1BD00217467 /* AppColourTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColourTableViewCell.swift; sourceTree = "<group>"; };
+		6CA4DA5F1EC747B200833C3B /* ExtendInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendInt.swift; sourceTree = "<group>"; };
 		6CD6E9911E633F7B00BB986D /* Rx_UPPBasicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx_UPPBasicService.swift; sourceTree = "<group>"; };
 		6CD6E9931E84660D00BB986D /* UPnP2Cast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UPnP2Cast.entitlements; sourceTree = "<group>"; };
 		90AD2E7481A6BBCA6ABDF05D /* Pods_UPnP2CastTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPnP2CastTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +149,7 @@
 				6C6787881E8FD9D1002AB5ED /* ExtendViewController.swift */,
 				6C67878A1E8FDF91002AB5ED /* ExtendWindow.swift */,
 				6C6787971E917A9E002AB5ED /* ExtendUserDefaults.swift */,
+				6CA4DA5F1EC747B200833C3B /* ExtendInt.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		6C5B63F81E428B2100FB475F = {
 			isa = PBXGroup;
 			children = (
+				6C3D0AF51ED1B40900778924 /* Settings.bundle */,
 				6C40F0551EABB57A00017BB2 /* .travis.yml */,
 				6C40F0531EABB55F00017BB2 /* README.md */,
 				6C5B64031E428B2100FB475F /* UPnP2Cast */,
@@ -301,7 +307,8 @@
 				TargetAttributes = {
 					6C5B64001E428B2100FB475F = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 4GB5S333EU;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -344,6 +351,7 @@
 				6C5B640F1E428B2100FB475F /* LaunchScreen.storyboard in Resources */,
 				6C6787961E9149D8002AB5ED /* front.png in Resources */,
 				6C5B640C1E428B2100FB475F /* Assets.xcassets in Resources */,
+				6C3D0AF61ED1B40900778924 /* Settings.bundle in Resources */,
 				6C5B640A1E428B2100FB475F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +468,7 @@
 				6C0A3C301E88052300DFE344 /* AlbumCollectionViewController.swift in Sources */,
 				6C1AE9911E58958200D28706 /* SelectedDevices.swift in Sources */,
 				6CD9C69B1E898F16007A81B7 /* Rx_UPPBasicService.swift in Sources */,
+				6CA4DA601EC747B200833C3B /* ExtendInt.swift in Sources */,
 				6C1AE98B1E587D4B00D28706 /* Rx_UPPDiscovery.swift in Sources */,
 				6C5B64051E428B2100FB475F /* AppDelegate.swift in Sources */,
 				6C88347D1E5E32970063ADDB /* MediaBrowseViewController.swift in Sources */,
@@ -613,14 +622,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UPnP2Cast/UPnP2Cast.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4GB5S333EU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/CocoaUPnP",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
 				);
 				INFOPLIST_FILE = UPnP2Cast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dkp.UPnP2Cast;
@@ -638,15 +647,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UPnP2Cast/UPnP2Cast.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Kirkegaard Poulsen (K36RWP4WZ6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Kirkegaard Poulsen (K36RWP4WZ6)";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4GB5S333EU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/CocoaUPnP",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
 				);
 				INFOPLIST_FILE = UPnP2Cast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = dkp.UPnP2Cast;

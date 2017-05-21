@@ -35,7 +35,7 @@ class DeviceSelectorViewController: AppColoursViewController {
         
         selectedPlayback.device = LastConnectedPlaybackDevice.get()
         
-        selectedPlayback.device.subscribe(onNext : { device in
+        selectedPlayback.device.throttle(0.2, scheduler: MainScheduler.instance).subscribe(onNext : { device in
             self.tabBarController?.selectedIndex = 1
         }).addDisposableTo(disposeBag)
         itemSelected.map{self.deviceTableView.cellForRow(at: $0)}.subscribe(onNext : {

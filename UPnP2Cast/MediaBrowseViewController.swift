@@ -19,7 +19,7 @@ class MediaBrowseViewController: AppColoursViewController {
     
     let disposeBag = DisposeBag()
     
-    public var objectID : String? = nil
+    public var mediaItem : UPPMediaItem? = nil
     public var server : UPPMediaServerDevice? = nil
     
     public let tableViewArray = Variable([UPPMediaItem]())
@@ -27,7 +27,19 @@ class MediaBrowseViewController: AppColoursViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mediaTableView.register(MediaTableViewCell.self, forCellReuseIdentifier: "mediaCell")
+        if let splitV = self.splitViewController{
+            splitV.rx.observe(Bool.self, "isCollapsed").filterNil().subscribe(onNext: {
+                if($0){
+                    let button = UIBarButtonItem(title: "Playing now", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.showPlayingNow(sender:)))
+                    self.navigationItem.rightBarButtonItem = button
+                }else{
+                    self.navigationItem.rightBarButtonItem = nil
+                }
+            }).addDisposableTo(disposeBag)
+        }
+        
+        
+        //mediaTableView.register(MediaTableViewCell.self, forCellReuseIdentifier: "mediaCell")
 
         tableViewArray.asObservable().bindTo(mediaTableView.rx.items(cellIdentifier: "mediaCell", cellType: MediaTableViewCell.self)){(row, mediaItem, cell) in
             cell.mediaItem = mediaItem

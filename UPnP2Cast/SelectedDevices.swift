@@ -11,6 +11,7 @@ import RxSwift
 import CocoaUPnP
 import UserNotifications
 import BRYXBanner
+import RxAppState
 
 class SelectedServerDevice {
     private let disposeBag = DisposeBag()
@@ -19,7 +20,7 @@ class SelectedServerDevice {
     static let Shared = SelectedServerDevice()
     
     init() {
-        sharedDevice = _device.throttle(0.2, scheduler: MainScheduler.instance).shareReplayLatestWhileConnected()
+        sharedDevice = _device.throttle(1, scheduler: MainScheduler.instance).shareReplayLatestWhileConnected()
         sharedDevice.subscribe(onNext:{
             print($0.friendlyName)
             let banner = Banner(title: "Server connected", subtitle: "Connected to " + $0.friendlyName, image:nil, backgroundColor: UIColor.green)
@@ -52,7 +53,7 @@ class SelectedPlaybackDevice {
     static let Shared = SelectedPlaybackDevice()
     
     init() {
-        sharedDevice = _device.throttle(0.2, scheduler: MainScheduler.instance).shareReplayLatestWhileConnected()
+        sharedDevice = _device.throttle(1, scheduler: MainScheduler.instance).shareReplayLatestWhileConnected()
         sharedDevice.subscribe(onNext:{
             print($0.friendlyName)
             let banner = Banner(title: "Playback connected", subtitle: "Connected to " + $0.friendlyName, image:nil, backgroundColor: UIColor.red)
